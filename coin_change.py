@@ -3,7 +3,7 @@
 # Logic
 # initialize change with 0
 # sort coins array
-#Iterate through it
+# Iterate through it
 # Add the coin to change if coin<= change+1
 # Return change+1 if coin>change+1
 
@@ -23,9 +23,3 @@ for coin in soretedCoins:
         
 
 print(change+1)
-
-# 
-#
-#
-#
-#
