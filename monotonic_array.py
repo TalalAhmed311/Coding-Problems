@@ -1,24 +1,23 @@
 array = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]
 array = [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 11]
 
-flag = True
-prev = array[0]
+def isMonotonic(array):
+    # Write your code here.
 
-order = 0
-if prev>array[1]:
-    order = 1
 
-for i in range(1,len(array)):
-    if order==0 and prev<=array[i]:
-        prev = array[i]
+    
+    if len(array)==1 or len(array)==0:
+        return True
 
-    elif order==1 and prev>=array[i]:
-        prev = array[i]
+    I_order = True
+    D_order = True
 
-    else:
-        print(prev)
-        print(array[i])
-        flag = False
-        break
+    for i in range(1,len(array)):
+        if array[i]< array[i-1]:
+            I_order =False
 
-print(flag)
+        if array[i] > array[i-1]:
+            D_order = False
+
+    return I_order or D_order
+    
